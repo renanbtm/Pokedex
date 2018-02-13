@@ -17,6 +17,7 @@ import api_model.Berry;
 import api_model.IndexBerrys;
 import api_model.IndexItems;
 import api_model.IndexPokemons;
+import api_model.Item;
 import api_model.Pokemon;
 import api_model.Results;
 import control.CommonData;
@@ -189,6 +190,28 @@ public class PokeAPI {
 			System.out.println("ERROR!!!\n" + e.getMessage());
 		}
 		return b;
+	}
+	
+	public Item getDataOfItem (String name) {
+		Item i = new Item();
+		try {
+			URL url = new URL("https://pokeapi.co/api/v2/item/" + name);
+			HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+			conn.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
+			conn.setRequestMethod("GET");
+			BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			
+			Gson itemData = new GsonBuilder().create();
+			i = itemData.fromJson(rd, Item.class);
+			
+			conn.disconnect();
+			rd.close();
+		} catch (MalformedURLException e) { // URL Exception
+			System.out.println("ERROR!!!\n" + e.getMessage());
+		} catch (IOException e) { // HTTPS Exception
+			System.out.println("ERROR!!!\n" + e.getMessage());
+		}
+		return i;
 	}
 	
 	private float map(long x, long in_min, long in_max, long out_min, long out_max)

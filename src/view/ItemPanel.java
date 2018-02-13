@@ -69,7 +69,9 @@ public class ItemPanel extends JPanel {
 			
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				System.out.println(name);
+				setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+				new ItemDetailDialog(name).setVisible(true);
+				setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
 		GroupLayout groupLayout = new GroupLayout(this);

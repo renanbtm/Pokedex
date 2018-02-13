@@ -2,13 +2,13 @@ package api_model;
 
 public class HeldItems {
 	
-	private Item item;
+	private HeldItemByPokemon item;
 	
-	public Item getItem() {
+	public HeldItemByPokemon getItem() {
 		return item;
 	}
 	
-	public void setItem(Item item) {
+	public void setItem(HeldItemByPokemon item) {
 		this.item = item;
 	}
 
