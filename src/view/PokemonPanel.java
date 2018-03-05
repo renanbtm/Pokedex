@@ -3,7 +3,6 @@ package view;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -19,9 +18,8 @@ import javax.swing.border.SoftBevelBorder;
 
 public class PokemonPanel extends JPanel {
 
-	/**
-	 * Create the panel.
-	 */
+	private static final long serialVersionUID = 1L;
+
 	public PokemonPanel(String name, int id) {
 		setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		setMinimumSize(new Dimension(120, 160));

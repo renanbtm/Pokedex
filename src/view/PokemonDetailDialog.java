@@ -12,44 +12,27 @@ import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableModel;
 
 import api_control.PokeAPI;
 import api_model.Ability;
 import api_model.Pokemon;
-import api_model.Stat;
 import control.WrapLayout;
 
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.ScrollPaneConstants;
-
 public class PokemonDetailDialog extends JDialog {
-
+	
+	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 	private JTable table;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			PokemonDetailDialog dialog = new PokemonDetailDialog("pikachu");
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Create the dialog.
-	 */
+	
 	public PokemonDetailDialog(String name) {
 
 		PokeAPI api = new PokeAPI();
@@ -113,6 +96,7 @@ public class PokemonDetailDialog extends JDialog {
 		JScrollPane scrollPane = new JScrollPane();
 
 		table = new JTable();
+		@SuppressWarnings("serial")
 		DefaultTableModel model = new DefaultTableModel(
 				new Object[][] {
 				},
@@ -120,9 +104,11 @@ public class PokemonDetailDialog extends JDialog {
 						"Stat", "Effort", "Base Stat"
 				}
 				) {
+			@SuppressWarnings("rawtypes")
 			Class[] columnTypes = new Class[] {
 					String.class, Integer.class, Integer.class
 			};
+			@SuppressWarnings({ "rawtypes", "unchecked" })
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];
 			}

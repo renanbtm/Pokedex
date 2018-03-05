@@ -1,34 +1,29 @@
 package view;
 
-import javax.swing.JPanel;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import java.awt.Color;
-import javax.swing.border.EtchedBorder;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.SwingConstants;
+import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Image;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 
-import javax.swing.border.BevelBorder;
-import java.awt.Dimension;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.SwingConstants;
+import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 
 import api_model.Pokemon;
-import api_model.Type;
 
 public class OLD_PokemonPanel extends JPanel {
+	
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Create the panel.
-	 */
 	public OLD_PokemonPanel(Pokemon p) {
 		setMaximumSize(new Dimension(32767, 175));
 		setMinimumSize(new Dimension(480, 175));

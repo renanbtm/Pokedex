@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.swing.JProgressBar;
@@ -19,12 +18,10 @@ import api_model.IndexItems;
 import api_model.IndexPokemons;
 import api_model.Item;
 import api_model.Pokemon;
-import api_model.Results;
 import control.CommonData;
 
 public class PokeAPI {
 	
-	private ArrayList<Pokemon> pokemons = new ArrayList<>();
 	private IndexPokemons indexPokemons = null;
 	private IndexBerrys indexBerrys = null;
 	private IndexItems indexItems = null;

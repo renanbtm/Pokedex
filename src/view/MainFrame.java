@@ -1,61 +1,30 @@
 package view;
 
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import java.util.ArrayList;
 import java.util.Properties;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JScrollPane;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jtattoo.plaf.hifi.HiFiLookAndFeel;
-
-import api_control.PokeAPI;
-import api_model.IndexPokemons;
-import api_model.Pokemon;
-import control.CommonData;
-import control.WrapLayout;
-
-import com.jgoodies.forms.layout.FormSpecs;
-import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.ImageIcon;
+import javax.swing.border.EmptyBorder;
+
+import com.jtattoo.plaf.hifi.HiFiLookAndFeel;
+
+import control.CommonData;
+import control.WrapLayout;
 
 public class MainFrame extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainFrame frame = new MainFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public MainFrame() {
 		
 		try {

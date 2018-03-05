@@ -3,8 +3,6 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-import java.util.ArrayList;
-import java.util.Properties;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
@@ -13,26 +11,14 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.SwingConstants;
 import javax.swing.SwingWorker;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
-import com.jtattoo.plaf.hifi.HiFiLookAndFeel;
-
 import api_control.PokeAPI;
-import api_model.IndexPokemons;
-import api_model.Pokemon;
-import control.CommonData;
 
 public class ProgramStart extends JDialog {
-
-	private final JPanel contentPanel = new JPanel();
-	JProgressBar progressBar = new JProgressBar();
-	JLabel lblInformation = new JLabel("...");
-
-	/**
-	 * Launch the application.
-	 */
+	
+	private static final long serialVersionUID = 1L;
+	
 	public static void main(String[] args) {
 		try {
 			ProgramStart dialog = new ProgramStart();
@@ -42,10 +28,11 @@ public class ProgramStart extends JDialog {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * Create the dialog.
-	 */
+	
+	private final JPanel contentPanel = new JPanel();
+	JProgressBar progressBar = new JProgressBar();
+	JLabel lblInformation = new JLabel("...");
+	
 	public ProgramStart() {
 		setModal(true);
 		setUndecorated(true);

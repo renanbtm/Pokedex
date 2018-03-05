@@ -2,7 +2,6 @@ package control;
 
 import java.util.ArrayList;
 
-import api_model.Pokemon;
 import api_model.Results;
 
 public class CommonData {

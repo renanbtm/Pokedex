@@ -18,10 +18,9 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.SoftBevelBorder;
 
 public class BerryPanel extends JPanel {
+	
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Create the panel.
-	 */
 	public BerryPanel(String name) {
 		setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		setMinimumSize(new Dimension(120, 160));

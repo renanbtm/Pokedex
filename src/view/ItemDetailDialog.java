@@ -1,36 +1,31 @@
 package view;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Font;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
-import java.awt.Font;
-import java.awt.Color;
+import javax.swing.JPanel;
+import javax.swing.JTextPane;
+import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 import api_control.PokeAPI;
 import api_model.Item;
 
-import javax.swing.border.LineBorder;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextPane;
-import java.awt.Cursor;
-
 public class ItemDetailDialog extends JDialog {
 
+	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		try {
 			ItemDetailDialog dialog = new ItemDetailDialog(null);

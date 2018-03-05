@@ -11,10 +11,9 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 
 public class HeldItensPanel extends JPanel {
+	
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Create the panel.
-	 */
 	public HeldItensPanel(String name) {
 		setBorder(new LineBorder(new Color(0, 0, 0)));
 		
